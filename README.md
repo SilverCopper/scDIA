@@ -1,4 +1,4 @@
-# scdia
+# scDIA
 
 `scdia` is a lightweight Python toolkit for label-free DIA single-cell
 proteomics analysis. It uses `AnnData` as the main analysis container and
@@ -6,7 +6,7 @@ provides utilities for reading DIA search-engine reports, quality control,
 normalization, imputation, batch correction, differential testing, volcano
 plots, and enrichment analysis.
 
-![scdia framework](./scdia.png)
+![scDIAframework](./scdia.png)
 
 The package is organized into five public modules:
 
