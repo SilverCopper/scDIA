@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scdia"
+version = "0.1.0"
+description = "DIA single-cell proteomics analysis utilities built around AnnData."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "SCP Microglia project" }
+]
+dependencies = [
+    "adjustText",
+    "anndata",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scanpy",
+    "scipy",
+    "statsmodels",
+]
+
+[project.optional-dependencies]
+enrichment = ["gseapy"]
+impute = ["fancyimpute"]
+pimms = ["pimms-learn"]
+scvi = ["scvi-tools"]
+python-integration = [
+    "bbknn",
+    "harmony-pytorch",
+    "scanorama",
+]
+all = [
+    "bbknn",
+    "fancyimpute",
+    "gseapy",
+    "harmony-pytorch",
+    "pimms-learn",
+    "scanorama",
+    "scvi-tools",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["scdia*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.package-data]
+scdia = ["py.typed", "pp/batch_correction.R"]
